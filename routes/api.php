@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MpesaController;
+use App\Http\Controllers\MpesaResponseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,4 +24,4 @@ use App\Http\Controllers\MpesaController;
 
 
 
-Route::get('/simulate/transaction', [MpesaController::class, 'resData']);
+Route::post('/simulate/transaction', [MpesaResponseController::class, 'mpesaSTKPush']);
