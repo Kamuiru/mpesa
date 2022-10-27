@@ -75,7 +75,7 @@ class MpesaController extends Controller
 
         $curl_response = curl_exec($curl);
 
-        $val = resData();
+       
 
         return $curl_response;
         
