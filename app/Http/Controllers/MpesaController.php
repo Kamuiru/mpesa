@@ -80,6 +80,10 @@ class MpesaController extends Controller
         return $curl_response;
         
     }
+    public function index(){
+        $payments = Payment::get();
+        return view('dashboard')->with('payments', $payments);
+    }
     // public function resData(Request $request){
     //     $response = json_decode($request->getContent());
     //     Log::info(json_encode($response));
