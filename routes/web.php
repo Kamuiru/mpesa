@@ -19,6 +19,7 @@ use App\Http\Controllers\LogoutController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::post('/simulate/transaction', [MpesaController::class, 'mpesaSTKPush']);
 Route::post('/token', [MpesaController::class, 'generateAccessToken']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');

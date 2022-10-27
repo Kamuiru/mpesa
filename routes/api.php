@@ -20,7 +20,7 @@ use App\Http\Controllers\MpesaController;
 // });
 
 
-Route::post('/simulate/transaction', [MpesaController::class, 'mpesaSTKPush']);
+
 
 
 Route::post('/receive/payments', [MpesaController::class, 'resData']);
