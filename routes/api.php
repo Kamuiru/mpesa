@@ -23,4 +23,4 @@ use App\Http\Controllers\MpesaController;
 
 
 
-Route::post('/receive/payments', [MpesaController::class, 'resData']);
+Route::get('/simulate/transaction', [MpesaController::class, 'resData']);
