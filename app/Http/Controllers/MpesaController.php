@@ -87,7 +87,7 @@ class MpesaController extends Controller
     }
     
     public function resData(Request $request){
-        $response = json_decode($request->getContent());
+        $response = json_decode($requessr());
         Log::info(json_encode($response));
         $amount = $response->Body->stkCallback->CallbackMetadata->Item[0]->Value;
         $transaction_id = $response->Body->stkCallback->CallbackMetadata->Item[1]->Value;
