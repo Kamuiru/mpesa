@@ -58,7 +58,7 @@ class MpesaController extends Controller
             'PartyA' => 254795822141,
             'PartyB' => 174379,
             'PhoneNumber' => 254795822141,
-            'CallBackURL' => 'https://dry-basin-83547.herokuapp.com/receive',
+            'CallBackURL' => 'https://dry-basin-83547.herokuapp.com/api/simulate/transaction',
             'AccountReference' => "E-SHOP",
             'TransactionDesc' => "Testing stk push on sandbox"
         ];
