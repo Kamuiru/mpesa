@@ -9,8 +9,8 @@ use App\Http\Controllers\MpesaResponseController;
 
 class MpesaResponseController extends Controller
 {
-    public function mpesaSTKPush(Request $request){
-        Log::info(($request->all()));
+    public function mpesaSTKPush(){
+        Log::info(file_get_contents('php://input'));
         // Log::info(json_encode($response));
     //     $amount = response->Body->stkCallback->CallbackMetadata->Item[0]->Value;
     //     $transaction_id = $response->Body->stkCallback->CallbackMetadata->Item[1]->Value;
