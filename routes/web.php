@@ -29,3 +29,6 @@ Route::post('/logout', [LogoutController::class, 'index'])->name('logout');
 
 Route::get('/', [MpesaController::class, 'index'])->middleware('auth');
 
+route::post('/receive', function(){
+    return view('receive');
+});
