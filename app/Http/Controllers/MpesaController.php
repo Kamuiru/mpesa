@@ -63,7 +63,7 @@ class MpesaController extends Controller
             'PartyA' => 254795822141,
             'PartyB' => 174379,
             'PhoneNumber' => 254795822141,
-            'CallBackURL' => 'https://dry-basin-83547.herokuapp.com/api/receive/payments',
+            'CallBackURL' => 'https://dry-b-83547.herokuapp.com/api/receive/payments',
             'AccountReference' => "E-SHOP",
             'TransactionDesc' => "Testing stk push on sandbox"
         ];
@@ -87,7 +87,7 @@ class MpesaController extends Controller
     }
     
     public function resData(Request $request){
-        $response = json_decode($requessr());
+        $response = json_decode($request->all());
         Log::info(json_encode($response));
         $amount = $response->Body->stkCallback->CallbackMetadata->Item[0]->Value;
         $transaction_id = $response->Body->stkCallback->CallbackMetadata->Item[1]->Value;
